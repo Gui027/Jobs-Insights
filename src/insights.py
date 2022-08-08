@@ -30,21 +30,14 @@ def filter_by_job_type(jobs, job_type):
 
 
 def get_unique_industries(path):
-    """Checks all different industries and returns a list of them
+    jobs_dict = read(path)
+    jobs_industries = set()
 
-    Must call `read`
-
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
-
-    Returns
-    -------
-    list
-        List of unique industries
-    """
-    return []
+    for job in jobs_dict:
+        if job["industry"] != '':
+            jobs_industries.add(job["industry"])
+        # jobs_industries_empty_values = filter(None, jobs_industries)
+    return jobs_industries
 
 
 def filter_by_industry(jobs, industry):
@@ -66,39 +59,27 @@ def filter_by_industry(jobs, industry):
 
 
 def get_max_salary(path):
-    """Get the maximum salary of all jobs
+    jobs_dict = read(path)
+    jobs_max_salary = list()
 
-    Must call `read`
-
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
-
-    Returns
-    -------
-    int
-        The maximum salary paid out of all job opportunities
-    """
-    pass
+    for job in jobs_dict:
+        if job["max_salary"] != "" and job["max_salary"].isdigit():
+            jobs_max_salary.append(int(job["max_salary"]))
+    print(jobs_max_salary)
+    max_result = max(jobs_max_salary)
+    return max_result
 
 
 def get_min_salary(path):
-    """Get the minimum salary of all jobs
+    jobs_dict = read(path)
+    jobs_min_salary = list()
 
-    Must call `read`
+    for job in jobs_dict:
+        if job["min_salary"] != "" and job["min_salary"].isdigit():
+            jobs_min_salary.append(int(job["min_salary"]))
 
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
-
-    Returns
-    -------
-    int
-        The minimum salary paid out of all job opportunities
-    """
-    pass
+    min_result = min(jobs_min_salary)
+    return min_result
 
 
 def matches_salary_range(job, salary):
