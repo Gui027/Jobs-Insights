@@ -1,16 +1,28 @@
-# 🚧 README em construção 🚧
+# Projeto Jobs Insights
 
-<!-- Olá, Tryber!
+# Contexto
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+Neste projeto implementei análises a partir de um conjunto de dados sobre empregos. As implementações serão incorporadas a um aplicativo Web desenvolvido com Flask (um framework web muito popular na comunidade Python). Tive também a oportunidade de escrever testes para a implementação de uma análise de dados.
 
-É essencial que você preencha esse documento por conta própria, ok?
+Os dados foram extraídos do site Glassdoor e obtidos através do Kaggle, uma plataforma disponiblizando conjuntos de dados para cientistas de dados.
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+## Técnologias usadas
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+Back-end:
+> Desenvolvido usando: Python, Pip, Flake8, Flask
 
--->
+
+## Instalando Dependências
+
+```bash
+$ python3 -m pip install -r dev-requirements.txt
+``` 
+
+## Executando Testes
+
+* Para rodar todos os testes:
+
+  ```
+   $ python3 -m pytest
+  ```
+
