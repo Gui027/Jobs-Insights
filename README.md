@@ -1,4 +1,5 @@
 # Projeto Jobs Insights
+![image](https://user-images.githubusercontent.com/83846567/188948730-75a315b9-765f-4c41-b1d8-61fd54941c81.png)
 
 # Contexto
 
